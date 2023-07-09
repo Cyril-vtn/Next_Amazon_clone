@@ -16,7 +16,7 @@ const Cart = () => {
 
   // Rendre le composant Cart
   return (
-    <div className="max-w-screen-2xl mx-auto px-6 flex justify-center items-center  gap-10 py-4">
+    <div className="max-w-screen-2xl h-full  mx-auto px-6 flex justify-center items-center mdl:items-start pt-10 mb-96  gap-10 pb-32">
       {productData.length > 0 ? (
         <div className="w-full h-full  xl:flex gap-10">
           {/* Rendre les articles du panier */}
@@ -25,7 +25,7 @@ const Cart = () => {
               <p className="text-2xl font-semibold text-amazon_blue">
                 Votre panier
               </p>
-              <p className="hidden mdl:block text-lg font-semibold text-amazon_blue">
+              <p className="hidden :block text-lg font-semibold text-amazon_blue">
                 Prix total
               </p>
             </div>

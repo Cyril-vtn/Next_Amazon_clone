@@ -22,7 +22,7 @@ const DynamicPage = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-4 md:py-10">
       {isLoading ? (
-        <div className="w-full flex flex-col gap-6 items-center justify-center py-20">
+        <div className="w-full flex flex-col h-screen gap-6 items-center justify-center">
           <BeatLoader color="#131921" size={40} />
         </div>
       ) : (

@@ -69,9 +69,12 @@ const MobileNavbar = () => {
         {/* Favori */}
         <Link
           href={"/favorite"}
-          className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
+          className="px-2 border relative border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
         >
           <MdFavoriteBorder className="text-2xl" />
+          <span className="absolute right-[-4px] top-[-1px] w-4 h-4  flex items-center justify-center text-sm text-amazon_yellow font-semibold">
+            {favoriteData.length}
+          </span>
         </Link>
 
         {/* Panier */}

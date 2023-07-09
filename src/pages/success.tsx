@@ -15,8 +15,8 @@ const SuccessPage = () => {
   }, [dispatch]);
 
   return (
-    <div className="flex flex-col gap-2 items-center justify-center py-20">
-      <h1 className="text-2xl text-hoverBg font-semibold">
+    <div className="flex flex-col h-[800px] mdl:h-screen gap-2 items-center pt-64 pb-20">
+      <h1 className="text-xl text-hoverBg font-semibold">
         Merci pour votre achat ! 🎉
       </h1>
       <Link

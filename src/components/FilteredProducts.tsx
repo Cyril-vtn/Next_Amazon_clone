@@ -21,7 +21,7 @@ type Item = {
 const FilteredProducts = ({ item }: Item) => {
   return (
     <div className="flex w-full items-center gap-4 hover:bg-gray-300">
-      <img className="w-20" src={item.image} alt="productImage" />
+      <img className="w-10 xs:w-20" src={item.image} alt="productImage" />
       <div>
         <p className="text-xs -mb-1">
           {item.brand}_{item.category}
