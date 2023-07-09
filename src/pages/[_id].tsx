@@ -20,13 +20,13 @@ const DynamicPage = () => {
     setProduct(router.query);
   }, [router.query]);
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-4 md:py-10">
+    <div className="max-w-screen-xl  md:mb-96 md:pb-96 lg:pb-0 mx-auto px-4 py-4 md:py-10">
       {isLoading ? (
         <div className="w-full flex flex-col h-screen gap-6 items-center justify-center">
           <BeatLoader color="#131921" size={40} />
         </div>
       ) : (
-        <div className="w-full grid md:grid-cols-3 gap-3 bg-gray-100 rounded-lg">
+        <div className="w-full grid md:grid-cols-3 gap-3  bg-gray-100 rounded-lg">
           <div className="flex items-center justify-center bg-gray-200 rounded-lg relative group overflow-hidden">
             <Image
               src={product.image}

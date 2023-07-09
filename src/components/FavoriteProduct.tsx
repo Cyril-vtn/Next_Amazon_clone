@@ -53,7 +53,7 @@ const FavoriteProduct = ({ item }: cartProductProps) => {
             }}
             className="w-44 h-10 font-medium bg-amazon_blue text-white rounded-md hover:bg-amazon_yellow duration-300 hover:text-black mt-2"
           >
-            add to cart
+            Ajouter au panier
           </button>
         </div>
       </div>

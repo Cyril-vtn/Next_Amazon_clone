@@ -14,7 +14,7 @@ const FavoritePage = () => {
         <div className="bg-white p-4 rounded-lg">
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1">
             <p className="text-2xl font-semibold text-amazon_blue">
-              Favorte Items
+              Produits favoris
             </p>
           </div>
           <div>
