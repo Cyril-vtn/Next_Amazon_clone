@@ -41,9 +41,9 @@ const BottomHeader = () => {
       </p> */}
 
       {/* Coupons */}
-      <p className="hidden mdl:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
+      {/* <p className="hidden mdl:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
         Coupons
-      </p>
+      </p> */}
 
       {/* Idées cadeaux */}
       <p className="hidden mdl:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
@@ -64,7 +64,7 @@ const BottomHeader = () => {
       {userInfo ? (
         <button
           onClick={handleSignOut}
-          className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white text-amazon_yellow hover:text-white  cursor-pointer duration-300"
+          className="inline-flex items-center h-8 px-2 border border-transparent hover:border-white text-amazon_yellow hover:text-white  cursor-pointer duration-300"
         >
           Se déconnecter
         </button>

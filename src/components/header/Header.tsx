@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useEffect } from "react";
 
@@ -69,12 +70,10 @@ const Header = () => {
         {/* signIn */}
         {userInfo ? (
           <div className="mdl:flex hidden  items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] gap-3">
-            <Image
+            <img
               src={userInfo?.image}
               alt="userImage"
               className="w-8 h-8 rounded-full object-cover"
-              width={40}
-              height={40}
             />
             <div className="text-xs text-gray-100 flex flex-col">
               <p className="text-white font-bold">{userInfo?.name}</p>

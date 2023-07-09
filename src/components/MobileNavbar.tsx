@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 // * IMAGES
@@ -48,8 +49,19 @@ const MobileNavbar = () => {
         </Link>
 
         {/* Utilisateur */}
-        <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]">
-          <BiUser className="text-2xl" />
+        <div
+          onClick={() => signIn()}
+          className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
+        >
+          {userInfo ? (
+            <img
+              className="w-8 object-cover"
+              src={userInfo.image}
+              alt="logoImg"
+            />
+          ) : (
+            <BiUser className="text-2xl" />
+          )}
         </div>
 
         {/* Favori */}
