@@ -49,30 +49,35 @@ const MobileNavbar = () => {
         </Link>
 
         {/* Utilisateur */}
-        <div
-          onClick={() => signIn()}
-          className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
-        >
-          {userInfo ? (
+        {userInfo ? (
+          <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]">
             <img
-              className="w-8 object-cover"
+              className="w-8 object-cover rounded-full"
               src={userInfo.image}
               alt="logoImg"
             />
-          ) : (
+          </div>
+        ) : (
+          <div
+            onClick={() => signIn()}
+            className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
+          >
             <BiUser className="text-2xl" />
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Favori */}
-        <div className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]">
+        <Link
+          href={"/favorite"}
+          className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
+        >
           <MdFavoriteBorder className="text-2xl" />
-        </div>
+        </Link>
 
         {/* Panier */}
         <div className="flex items-center justify-center h-[70%] border border-transparent hover:border-white cursor-pointer duration-300">
           <Link href={"/cart"} className="px-2">
-            <span className="absolute text-amazon_yellow text-xs top-2 right-[55px] font-semibold">
+            <span className="absolute text-amazon_yellow text-xs top-2 right-[56px] font-semibold">
               {productData ? productData.length : 0}
             </span>
             <Image className="w-8 object-cover" src={cartIcon} alt="logoImg" />

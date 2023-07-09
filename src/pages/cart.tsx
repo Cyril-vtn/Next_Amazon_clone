@@ -25,7 +25,7 @@ const Cart = () => {
               <p className="text-2xl font-semibold text-amazon_blue">
                 Votre panier
               </p>
-              <p className="text-lg font-semibold text-amazon_blue">
+              <p className="hidden mdl:block text-lg font-semibold text-amazon_blue">
                 Prix total
               </p>
             </div>

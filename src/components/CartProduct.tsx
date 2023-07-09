@@ -9,6 +9,8 @@ import {
   deleteProduct,
   increaseQuantity,
 } from "@/store/nextSlice";
+import { MdFavoriteBorder } from "react-icons/md";
+
 interface Item {
   brand: string;
   category: string;
@@ -43,6 +45,7 @@ const CartProduct = ({ item }: cartProductsProps) => {
         src={item.image}
         alt="productImage"
       />
+      <MdFavoriteBorder className="text-2xl absolute top-2 right-2" />
       <div className=" items-center md:flex px-2 gap-4">
         <div className="flex flex-col gap-1">
           <p className="text-lg font-semibold text-amazon_blue">{item.title}</p>

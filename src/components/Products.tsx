@@ -6,6 +6,7 @@ import { FaHeart } from "react-icons/fa";
 import FormattedPrice from "./FormattedPrice";
 import { useDispatch } from "react-redux";
 import { addToCart, addToFavorite } from "@/store/nextSlice";
+import Link from "next/link";
 
 /**
  * Rend une liste de produits.
@@ -13,12 +14,12 @@ import { addToCart, addToFavorite } from "@/store/nextSlice";
  * @param products - Un tableau d'objets produit.
  * @returns Élément JSX représentant la liste des produits.
  */
-const Products = ({ products }: any) => {
+const Products = ({ productData }: any) => {
   const dispatch = useDispatch();
 
   return (
     <div className="w-full px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-6">
-      {products.map(
+      {productData.map(
         ({
           _id,
           title,
@@ -35,13 +36,31 @@ const Products = ({ products }: any) => {
             className="w-full relative bg-white text-black p-4 border border-gray-300 rounded-lg shadow-lg group"
           >
             <div className="w-full h-[400px] relative overflow-hidden">
-              <Image
-                className="w-full h-full object-contain scale-90 hover:scale-100 transition-transform duration-500 ease-in-out "
-                width={200}
-                height={300}
-                src={image}
-                alt="ProductImage"
-              />
+              <Link
+                href={{
+                  pathname: `/${_id}`,
+                  query: {
+                    _id: _id,
+                    brand: brand,
+                    category: category,
+                    description: description,
+                    image: image,
+                    isNew: isNew,
+                    oldPrice: oldPrice,
+                    price: price,
+                    title: title,
+                  },
+                }}
+              >
+                <Image
+                  className="w-full h-full object-cover scale-90 hover:scale-100 transition-transform duration-300"
+                  width={300}
+                  height={300}
+                  src={image}
+                  alt="productImage"
+                />
+              </Link>
+
               <div className="w-12 h-24 absolute bottom-10 right-0 border-[1px] border-gray-400 bg-white rounded-md flex flex-col translate-x-20 group-hover:translate-x-0 duration-300">
                 {/* Bouton Ajouter au panier */}
                 <span
