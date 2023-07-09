@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ["i.ibb.co"],
   },
+  i18n: {
+    locales: ["fr"],
+    defaultLocale: "fr",
+  },
 };
 
 module.exports = nextConfig;
